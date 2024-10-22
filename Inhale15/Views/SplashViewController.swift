@@ -19,8 +19,12 @@ class SplashViewController: UIViewController {
         setupBackground()
         setupSplashScreen()
         
+      
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         viewModel.startSplashTimer {
-       //     self.navigateToInstructionScreen()
+            self.navigateToInstructionScreen()
         }
     }
     
@@ -63,7 +67,8 @@ class SplashViewController: UIViewController {
         let instructioVC = InstructionViewController()
         instructioVC.modalTransitionStyle = .crossDissolve
         instructioVC.modalPresentationStyle = .fullScreen
-        present(instructioVC, animated: true)
+      //  present(instructioVC, animated: true)
+        navigationController?.pushViewController(instructioVC, animated: true)
     }
     
 }

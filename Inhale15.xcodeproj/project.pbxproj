@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843B19FF2CC84B7D00A5804D /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B19FE2CC84B7D00A5804D /* TimerViewController.swift */; };
 		8450760C2CC1AA410059FFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450760B2CC1AA410059FFDD /* AppDelegate.swift */; };
 		8450760E2CC1AA410059FFDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450760D2CC1AA410059FFDD /* SceneDelegate.swift */; };
 		845076102CC1AA410059FFDD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450760F2CC1AA410059FFDD /* SplashViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		843B19FE2CC84B7D00A5804D /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		845076082CC1AA410059FFDD /* Inhale15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inhale15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8450760B2CC1AA410059FFDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8450760D2CC1AA410059FFDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				8450760F2CC1AA410059FFDD /* SplashViewController.swift */,
 				8495EF572CC70425001B7F7F /* InstructionViewController.swift */,
+				843B19FE2CC84B7D00A5804D /* TimerViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				8495EF582CC70425001B7F7F /* InstructionViewController.swift in Sources */,
 				845076162CC1AA410059FFDD /* Inhale15.xcdatamodeld in Sources */,
 				845076102CC1AA410059FFDD /* SplashViewController.swift in Sources */,
+				843B19FF2CC84B7D00A5804D /* TimerViewController.swift in Sources */,
 				8495EF5A2CC70541001B7F7F /* SplashViewModel.swift in Sources */,
 				8450760C2CC1AA410059FFDD /* AppDelegate.swift in Sources */,
 				8450760E2CC1AA410059FFDD /* SceneDelegate.swift in Sources */,
