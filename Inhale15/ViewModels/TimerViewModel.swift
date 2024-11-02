@@ -14,6 +14,8 @@ class TimerViewModel {
     private var uiUpdateInterval = 10 // Обновляем UI каждые 0.1 секунды (10 раз по 0.01 секунды)
     private var tickCounter = 0
     
+    private let coreDataService = CoreDataService()
+    
     var onTimeUpdate: ((String) -> Void)?
     var onTimerStateChanged: ((Bool) -> Void)?
     var onResultsUpdate: (() -> Void)?
@@ -40,6 +42,8 @@ class TimerViewModel {
     private func pauseTimer() {
         isRunning = false
         timer?.invalidate()
+        
+        coreDataService.saveBreathSession(duration: Double(milliseconds) / 100.0, date: Date())
     }
     
     func resetTimer() {

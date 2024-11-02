@@ -19,6 +19,8 @@
 		845076322CC1AA460059FFDD /* Inhale15UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845076312CC1AA460059FFDD /* Inhale15UITestsLaunchTests.swift */; };
 		845076402CC1AD000059FFDD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8450763F2CC1AD000059FFDD /* SnapKit */; };
 		848B55E22CC974C600FA4E3F /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B55E12CC974C600FA4E3F /* TimerViewModel.swift */; };
+		848B55E52CD6D8D300FA4E3F /* BreathDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848B55E32CD6D8D300FA4E3F /* BreathDataModel.xcdatamodeld */; };
+		848B55E72CD6D95500FA4E3F /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B55E62CD6D95500FA4E3F /* CoreDataService.swift */; };
 		8495EF582CC70425001B7F7F /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495EF572CC70425001B7F7F /* InstructionViewController.swift */; };
 		8495EF5A2CC70541001B7F7F /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495EF592CC70541001B7F7F /* SplashViewModel.swift */; };
 		8495EF5C2CC7084C001B7F7F /* Animation - 1727784149695.json in Resources */ = {isa = PBXBuildFile; fileRef = 8495EF5B2CC7084C001B7F7F /* Animation - 1727784149695.json */; };
@@ -59,6 +61,8 @@
 		8450762F2CC1AA460059FFDD /* Inhale15UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inhale15UITests.swift; sourceTree = "<group>"; };
 		845076312CC1AA460059FFDD /* Inhale15UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inhale15UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		848B55E12CC974C600FA4E3F /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		848B55E42CD6D8D300FA4E3F /* BreathDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BreathDataModel.xcdatamodel; sourceTree = "<group>"; };
+		848B55E62CD6D95500FA4E3F /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		8495EF572CC70425001B7F7F /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		8495EF592CC70541001B7F7F /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		8495EF5B2CC7084C001B7F7F /* Animation - 1727784149695.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Animation - 1727784149695.json"; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 		845075FF2CC1AA410059FFDD = {
 			isa = PBXGroup;
 			children = (
+				848B55E32CD6D8D300FA4E3F /* BreathDataModel.xcdatamodeld */,
 				8450760A2CC1AA410059FFDD /* Inhale15 */,
 				845076242CC1AA460059FFDD /* Inhale15Tests */,
 				8450762E2CC1AA460059FFDD /* Inhale15UITests */,
@@ -177,6 +182,7 @@
 		8495EF542CC703B0001B7F7F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				848B55E62CD6D95500FA4E3F /* CoreDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -339,11 +345,13 @@
 			files = (
 				8495EF582CC70425001B7F7F /* InstructionViewController.swift in Sources */,
 				845076162CC1AA410059FFDD /* Inhale15.xcdatamodeld in Sources */,
+				848B55E72CD6D95500FA4E3F /* CoreDataService.swift in Sources */,
 				845076102CC1AA410059FFDD /* SplashViewController.swift in Sources */,
 				843B19FF2CC84B7D00A5804D /* TimerViewController.swift in Sources */,
 				848B55E22CC974C600FA4E3F /* TimerViewModel.swift in Sources */,
 				8495EF5A2CC70541001B7F7F /* SplashViewModel.swift in Sources */,
 				8450760C2CC1AA410059FFDD /* AppDelegate.swift in Sources */,
+				848B55E52CD6D8D300FA4E3F /* BreathDataModel.xcdatamodeld in Sources */,
 				8450760E2CC1AA410059FFDD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,6 +725,16 @@
 			);
 			currentVersion = 845076152CC1AA410059FFDD /* Inhale15.xcdatamodel */;
 			path = Inhale15.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		848B55E32CD6D8D300FA4E3F /* BreathDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				848B55E42CD6D8D300FA4E3F /* BreathDataModel.xcdatamodel */,
+			);
+			currentVersion = 848B55E42CD6D8D300FA4E3F /* BreathDataModel.xcdatamodel */;
+			path = BreathDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
