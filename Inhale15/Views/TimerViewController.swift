@@ -50,6 +50,17 @@ class TimerViewController: UIViewController {
         return button
     }()
     
+    private let fifteenSecondButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("15 сек", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        button.backgroundColor = .systemGreen
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 35
+        button.layer.masksToBounds = true
+        return button
+    }()
+    
     // TableView для отображения результатов
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -69,6 +80,7 @@ class TimerViewController: UIViewController {
         // Actions
         startPauseButton.addTarget(self, action: #selector(startPauseTapped), for: .touchUpInside)
         resetButton.addTarget(self, action: #selector(resetTapped), for: .touchUpInside)
+        fifteenSecondButton.addTarget(self, action: #selector(fifteenSecondTapped), for: .touchUpInside)
         
         // Bind to ViewModel
         viewModel.onTimeUpdate = { [weak self] timeString in
@@ -96,6 +108,7 @@ class TimerViewController: UIViewController {
         view.addSubview(timerLabel)
         view.addSubview(startPauseButton)
         view.addSubview(resetButton)
+        view.addSubview(fifteenSecondButton)
         view.addSubview(tableView)
         
         // Layout using SnapKit
@@ -120,6 +133,12 @@ class TimerViewController: UIViewController {
             make.width.height.equalTo(70) // Make it round
         }
         
+        fifteenSecondButton.snp.makeConstraints { make in
+            make.top.equalTo(circleView.snp.bottom).offset(40)
+            make.centerX.equalToSuperview().offset(80)
+            make.width.height.equalTo(70)
+        }
+        
         tableView.snp.makeConstraints { make in
             make.top.equalTo(resetButton.snp.bottom).offset(20)
             make.left.right.bottom.equalToSuperview()
@@ -133,6 +152,10 @@ class TimerViewController: UIViewController {
     @objc private func resetTapped() {
         viewModel.resetTimer()
     }
+    
+    @objc private func fifteenSecondTapped() {
+          viewModel.startFifteenSecondSession()
+      }
 }
 
 extension TimerViewController: UITableViewDataSource {

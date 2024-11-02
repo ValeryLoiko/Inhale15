@@ -43,7 +43,6 @@ class TimerViewModel {
         isRunning = false
         timer?.invalidate()
         
-        coreDataService.saveBreathSession(duration: Double(milliseconds) / 100.0, date: Date())
     }
     
     func resetTimer() {
@@ -77,5 +76,34 @@ class TimerViewModel {
         let seconds = totalSeconds % 60
         let milli = milliseconds % 100
         return String(format: "%02d:%02d:%02d", minutes, seconds, milli)
+    }
+    
+    func startFifteenSecondSession() {
+        // Сохраняем текущую длительность основного таймера
+        coreDataService.saveBreathSession(duration: Double(milliseconds) / 100.0, date: Date())
+        
+        // Останавливаем основной таймер, если он работал
+        isRunning = false
+        timer?.invalidate()
+        
+        // Сбрасываем значение и обновляем UI для 15 секунд
+        onTimeUpdate?("00:15:00")
+        var fifteenSecondCounter = 15  // Счётчик для 15 секунд
+        
+        // Запускаем новый 15-секундный таймер
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
+            guard let self = self else { return }
+            
+            fifteenSecondCounter -= 1
+            self.onTimeUpdate?(String(format: "00:%02d:00", fifteenSecondCounter))
+            
+            if fifteenSecondCounter <= 0 {
+                timer.invalidate()
+                print("Таймер на 15 секунд завершён")
+                
+                // Можно вызвать здесь `onTimerStateChanged` для обновления UI
+                self.onTimerStateChanged?(self.isRunning)
+            }
+        }
     }
 }
